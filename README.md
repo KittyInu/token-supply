@@ -3,7 +3,19 @@
 
 Currently implemented with my JSON Server as a temporary solution to create api endpoints for circulating, total, and max supply of the token.
 
-#### Endpoints:
+#### Endpoints
+
+##### Syntax
+
+```
+https://my-json-server.typicode.com/KittyInu/token-supply/<endpoint>
+```
+
+Values for `endpoint`:
+
+- `total`
+- `circulating`
+- `max`
 
 [Total Minted Supply](https://my-json-server.typicode.com/KittyInu/token-supply/total)
 
@@ -13,11 +25,11 @@ Currently implemented with my JSON Server as a temporary solution to create api 
 
 - Return: `TotalMintedSupply - BurnedTokens - BotWallets - Locked`
 
-[Max Supply](https://my-json-server.typicode.com/KittyInu/token-supply/circulating)
+[Max Supply](https://my-json-server.typicode.com/KittyInu/token-supply/max)
 
 - Return: `TotalMintedSupply - BurnedTokens - BotWallets`
 
-#### Definitions:
+#### Definitions
 
 - `TotalMintedSupply`: Total number of tokens minted at launch. Fixed value of 1 trillion. 
 
