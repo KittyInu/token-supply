@@ -17,21 +17,28 @@ Values for `endpoint`:
 - `circulating`
 - `max`
 
-[Total Minted Supply](https://my-json-server.typicode.com/KittyInu/token-supply/total)
+[Total Supply](https://my-json-server.typicode.com/KittyInu/token-supply/total)
 
-- Return: 1 Trillion tokens (constant)
+> Total Supply is the total amount of coins in existence right now (minus any coins that have been verifiably burned). ([source](https://coinmarketcap.com/faq/))
+
+- Return: `MaxSupply - BurnedTokens - BotWallets`
 
 [Circulating Supply](https://my-json-server.typicode.com/KittyInu/token-supply/circulating)
 
-- Return: `TotalMintedSupply - BurnedTokens - BotWallets - Locked`
+> Circulating Supply is the best approximation of the number of coins that are circulating in the market and in the general public's hands. ([source](https://coinmarketcap.com/faq/))
+
+- Return: `MaxSupply - BurnedTokens - BotWallets - Locked`
 
 [Max Supply](https://my-json-server.typicode.com/KittyInu/token-supply/max)
 
-- Return: `TotalMintedSupply - BurnedTokens - BotWallets`
+> Max Supply is the best approximation of the maximum amount of coins that will ever exist in the lifetime of the cryptocurrency. ([source](https://coinmarketcap.com/faq/))
+
+- Return: 1 Trillion tokens (constant)
+
 
 #### Definitions
 
-- `TotalMintedSupply`: Total number of tokens minted at launch. Fixed value of 1 trillion. 
+- `MaxSupply`: Total number of tokens minted at launch. Fixed value of 1 trillion. 
 
 - `BurnedTokens`: Total number of tokens sent to dead wallet address. 
 
